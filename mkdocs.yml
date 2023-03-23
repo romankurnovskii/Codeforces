@@ -1,0 +1,28 @@
+# Project information
+site_name: CodeForces Solutions
+site_description: CodeForces Solutions Python
+site_author: romankurnovskii/Codeforces
+site_url: https://romankurnovskii.com/Codeforces
+
+# Repository
+repo_name: rk
+repo_url: https://github.com/romankurnovskii/Codeforces
+
+theme:
+  name: material
+  language: en
+
+# Extensions
+markdown_extensions:
+  - pymdownx.superfences:
+  - pymdownx.highlight:
+      linenums: true
+      linenums_style: pymdownx.table
+  - pymdownx.tabbed:
+      alternate_style: true
+
+# nav:
+#   - Preface: index.md
+#   - Style Guide: styleguide.md
+  # - Problems:
+  #     - 1013A: problems/1013A.md
