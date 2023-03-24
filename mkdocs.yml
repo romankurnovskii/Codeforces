@@ -1,16 +1,29 @@
 # Project information
 site_name: CodeForces Solutions
 site_description: CodeForces Solutions Python
-site_author: romankurnovskii/Codeforces
+site_author: Roman Kurnovskii
 site_url: https://romankurnovskii.com/Codeforces
 
 # Repository
 repo_name: romankurnovskii/Codeforces
 repo_url: https://github.com/romankurnovskii/Codeforces
+edit_uri: blob/main/docs/
+
+# Copyright
+copyright: Copyright &copy; <a href="https://github.com/romankurnovskii/Codeforces">Roman Kurnovskii</a> 2023
 
 theme:
   name: material
   language: en
+  features:
+    - content.action.edit
+    - content.code.copy
+    - navigation.tabs.sticky
+    - search.highlight
+    - search.share
+  font:
+    text: Roboto
+    code: Roboto Mono
 
 # Extensions
 markdown_extensions:
@@ -21,8 +34,10 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
-# nav:
-#   - Preface: index.md
-#   - Style Guide: styleguide.md
-  # - Problems:
-  #     - 1013A: problems/1013A.md
+# Customization
+# extra:
+#   social:
+#     - icon: fontawesome/brands/github
+#       link: https://github.com/romankurnovskii
+#     - icon: fontawesome/brands/linkedin
+#       link: https://www.linkedin.com/in/roman-kurnovskii

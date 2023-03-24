@@ -25,6 +25,7 @@ jobs:
 
       - name: Generate mkdocs pages
         run: |
+          cp README.md docs/index.md
           python parse_solutions.py
 
       - name: Build MkDocs site
