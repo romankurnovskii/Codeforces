@@ -27,6 +27,7 @@ def parse_solutions(root_path):
                 problem_name = pathlib.Path(file).stem
 
                 # Generate the problem link
+                #FIXME
                 match = re.match(r"(\d+)_([A-Za-z]+)", problem_name)
                 if match:
                     problem_number, letter = match.groups()
