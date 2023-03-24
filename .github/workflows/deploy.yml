@@ -23,6 +23,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install mkdocs mkdocs-material
 
+      - name: Generate mkdocs pages
+        run: |
+          python parse_solutions.py
+
       - name: Build MkDocs site
         run: mkdocs build
 

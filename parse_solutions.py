@@ -2,23 +2,32 @@ import os
 import pathlib
 import re
 
+
 def parse_solutions(root_path):
     for root, _, files in os.walk(root_path):
-        problem_files = [f for f in files if f.endswith(".py")]
+        problem_files = sorted([f for f in files if f.endswith(".py")])
         if len(problem_files) == 0:
             continue
 
         problem_folder = os.path.basename(root)
         output_file = os.path.join("docs", "problems", f"{problem_folder}.md")
 
+        # add description for whole page if exists
+        description_file = os.path.join(root, "description.md")
+        description = ""
+        if os.path.exists(description_file):
+            with open(description_file, "r") as desc_f:
+                description = desc_f.read()
+
         with open(output_file, "w") as f:
             f.write(f"# {problem_folder} Problems\n\n")
+            f.write(f"{description}\n\n")
 
             for file in problem_files:
                 problem_name = pathlib.Path(file).stem
 
                 # Generate the problem link
-                match = re.match(r"(\d+)([A-Za-z]+)", problem_name)
+                match = re.match(r"(\d+)_([A-Za-z]+)", problem_name)
                 if match:
                     problem_number, letter = match.groups()
                     problem_link = f"https://codeforces.com/problemset/problem/{problem_number}/{letter}"
@@ -38,10 +47,11 @@ def parse_solutions(root_path):
                 with open(file_path, "r") as code_f:
                     code = code_f.read()
 
-                f.write("### Solution\n\n")
+                # f.write("### Solution\n\n")
                 f.write('```python\n')
                 f.write(code)
                 f.write('\n```\n')
+
 
 if __name__ == "__main__":
     solutions_dir = "solutions"
