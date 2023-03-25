@@ -20,7 +20,7 @@ def parse_solutions(root_path):
                 description = desc_f.read()
 
         with open(output_file, "w") as f:
-            f.write(f"# {problem_folder} Problems\n\n")
+            f.write(f"# {problem_folder}\n\n")
             f.write(f"{description}\n\n")
 
             for file in problem_files:
