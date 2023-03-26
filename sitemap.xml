@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://romankurnovskii.com/Codeforces/</loc>
-         <lastmod>2023-03-25</lastmod>
+         <lastmod>2023-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://romankurnovskii.com/Codeforces/problems/1742/</loc>
-         <lastmod>2023-03-25</lastmod>
+         <lastmod>2023-03-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://romankurnovskii.com/Codeforces/problems/1799/</loc>
+         <lastmod>2023-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://romankurnovskii.com/Codeforces/problems/1807/</loc>
-         <lastmod>2023-03-25</lastmod>
+         <lastmod>2023-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://romankurnovskii.com/Codeforces/problems/1809/</loc>
-         <lastmod>2023-03-25</lastmod>
+         <lastmod>2023-03-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
