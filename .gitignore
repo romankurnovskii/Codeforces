@@ -1,3 +1,5 @@
 .venv
 site
 .cph
+input.txt
+.DS_Store
