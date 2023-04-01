@@ -13,7 +13,7 @@ edit_uri: blob/main/docs/
 copyright: Copyright &copy; <a href="https://github.com/romankurnovskii/Codeforces">Roman Kurnovskii</a> 2023
 
 theme:
-  name: material
+  name: material # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/
   language: en
   features:
     - content.action.edit
@@ -35,9 +35,12 @@ markdown_extensions:
       alternate_style: true
 
 # Customization
-# extra:
-#   social:
-#     - icon: fontawesome/brands/github
-#       link: https://github.com/romankurnovskii
+extra:
+  analytics:
+    provider: google
+    property: G-26F2C5ZR4Y
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/romankurnovskii/Codeforces
 #     - icon: fontawesome/brands/linkedin
 #       link: https://www.linkedin.com/in/roman-kurnovskii
