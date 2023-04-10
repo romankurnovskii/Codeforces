@@ -1,0 +1,3 @@
+1. Start by placing the maximum value (2 * 𝑛) in the top-left cell (1, 1), and the second maximum value (2 * 𝑛 - 1) in the bottom-right cell (2, 𝑛).
+1. Fill the remaining cells in the first row and the second row using the remaining numbers in descending order while alternating rows.
+1. If the row has an even number of cells, start filling the row from the second cell, otherwise start from the first cell.
