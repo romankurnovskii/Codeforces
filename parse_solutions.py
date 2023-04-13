@@ -40,9 +40,9 @@ def parse_solutions(root_path):
                 description_file = os.path.join(root, f"{problem_name}.md")
                 if os.path.exists(description_file):
                     with open(description_file, "r") as desc_f:
-                        description = desc_f.read()
-                    f.write("### Description\n\n")
-                    f.write(f"{description}\n\n")
+                        explanation = desc_f.read()
+                    f.write("### Explanation\n\n")
+                    f.write(f"{explanation}\n\n")
 
                 file_path = os.path.join(root, file)
                 with open(file_path, "r") as code_f:
