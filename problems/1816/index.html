@@ -500,8 +500,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
+  <a href="#explanation" class="md-nav__link">
+    Explanation
   </a>
   
 </li>
@@ -520,8 +520,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#description_1" class="md-nav__link">
-    Description
+  <a href="#explanation_1" class="md-nav__link">
+    Explanation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_ian_and_array_sorting" class="md-nav__link">
+    C_Ian_and_Array_Sorting
+  </a>
+  
+    <nav class="md-nav" aria-label="C_Ian_and_Array_Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_2" class="md-nav__link">
+    Explanation
   </a>
   
 </li>
@@ -581,8 +601,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
+  <a href="#explanation" class="md-nav__link">
+    Explanation
   </a>
   
 </li>
@@ -601,8 +621,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#description_1" class="md-nav__link">
-    Description
+  <a href="#explanation_1" class="md-nav__link">
+    Explanation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c_ian_and_array_sorting" class="md-nav__link">
+    C_Ian_and_Array_Sorting
+  </a>
+  
+    <nav class="md-nav" aria-label="C_Ian_and_Array_Sorting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation_2" class="md-nav__link">
+    Explanation
   </a>
   
 </li>
@@ -638,7 +678,7 @@
 <h1 id="1816">1816</h1>
 <p><a href="https://codeforces.com/contest/1816">Codeforces Round 865 (Div. 2)</a></p>
 <h2 id="a_ian_visits_mary"><a href="">A_Ian_Visits_Mary</a></h2>
-<h3 id="description">Description</h3>
+<h3 id="explanation">Explanation</h3>
 <p>Ian and Mary are frogs living on a grid (Cartesian coordinate plane) with integer coordinates. Ian starts at point (0,0), and Mary is at point (a, b). </p>
 <p>Ian wants to reach Mary in at most two jumps. Ian can only jump from one point with integer coordinates to another point with integer coordinates without landing on any other integer-coordinate point in between.</p>
 <ol>
@@ -676,7 +716,7 @@
     <span class="n">solve</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="b_grid_reconstruction"><a href="">B_Grid_Reconstruction</a></h2>
-<h3 id="description_1">Description</h3>
+<h3 id="explanation_1">Explanation</h3>
 <ol>
 <li>Start by placing the maximum value (2 * 𝑛) in the top-left cell (1, 1), and the second maximum value (2 * 𝑛 - 1) in the bottom-right cell (2, 𝑛).</li>
 <li>Fill the remaining cells in the first row and the second row using the remaining numbers in descending order while alternating rows.</li>
@@ -727,6 +767,60 @@
 
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">grid</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">line</span><span class="p">)</span>
+
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
+    <span class="n">solve</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="c_ian_and_array_sorting"><a href="">C_Ian_and_Array_Sorting</a></h2>
+<h3 id="explanation_2">Explanation</h3>
+<p>The main idea of the solution is to iterate through the array, making the difference between consecutive pairs alternate between positive and negative. To do this, we can perform the following algorithm:</p>
+<ol>
+<li>Iterate through the array with a step of 2 (i.e., process every other element).</li>
+<li>For each element, check if it is the last element or the second-last element.</li>
+<li>If it's the last element, the answer is "YES" because we can always make the array non-decreasing by adding or subtracting the same value from every other element.</li>
+<li>If it's the second-last element, the answer is "YES" if the current element is less than or equal to the next element, otherwise, it's "NO".</li>
+<li>If the current element is not the last or second-last element, update the next <em>next</em> element by subtracting the difference between the current element and the next element. This ensures that the difference between consecutive pairs alternates between positive and negative.</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">solve</span><span class="p">():</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;YES&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;YES&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NO&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">a</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">]</span> <span class="o">-=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;YES&quot;</span><span class="p">)</span>
 
 
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
