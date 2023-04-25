@@ -388,13 +388,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logic" class="md-nav__link">
-    Logic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#c_quiz_master" class="md-nav__link">
     C_Quiz_Master
   </a>
@@ -415,13 +408,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logic_1" class="md-nav__link">
-    Logic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#d_score_of_a_tree" class="md-nav__link">
     D_Score_of_a_Tree
   </a>
@@ -438,20 +424,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logic_2" class="md-nav__link">
-    Logic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#naive-approach" class="md-nav__link">
-    Naive approach
-  </a>
   
 </li>
       
@@ -705,13 +677,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logic" class="md-nav__link">
-    Logic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#c_quiz_master" class="md-nav__link">
     C_Quiz_Master
   </a>
@@ -732,13 +697,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logic_1" class="md-nav__link">
-    Logic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#d_score_of_a_tree" class="md-nav__link">
     D_Score_of_a_Tree
   </a>
@@ -755,20 +713,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logic_2" class="md-nav__link">
-    Logic
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#naive-approach" class="md-nav__link">
-    Naive approach
-  </a>
   
 </li>
       
@@ -848,7 +792,7 @@
 </code></pre></div></td></tr></table></div>
 <h2 id="b_emordnilap"><a href="">B_Emordnilap</a></h2>
 <h3 id="explanation_1">Explanation</h3>
-<h2 id="logic">Logic</h2>
+<p><strong>Logic:</strong></p>
 <ol>
 <li>Find the factorial of the given number <code>n</code></li>
 <li>Calculate the total number of inversion pairs in the array</li>
@@ -897,7 +841,7 @@
 <p>You need to form a team from a group of students with different smartness levels such that the team is proficient in all given topics. </p>
 <p>A student is proficient in a topic if their smartness is divisible by the topic number. </p>
 <p>The goal is to minimize the maximum difference in smartness between any two students in the team.</p>
-<h2 id="logic_1">Logic</h2>
+<p><strong>Logic:</strong></p>
 <ol>
 <li>Precompute divisors for all numbers up to a maximum value</li>
 <li>Sort the students by their smartness levels</li>
@@ -1001,14 +945,14 @@
 <p>At every subsequent time step, the value of a node becomes the <strong>bitwise XOR</strong> of the values of its children at the previous time step. </p>
 <p>The goal is to find the sum of the values of all nodes at every time step until <code>t=10^100</code> for all <code>2^n</code> possible initial configurations of the tree. </p>
 <p>The final answer should be the sum of these values <code>modulo 10^9+7</code>.</p>
-<h2 id="logic_2">Logic</h2>
+<p><strong>Logic:</strong></p>
 <p>The XOR operation propagates the values in the tree from the leaves <strong>towards the root</strong>. </p>
 <p>The maximum number of time steps required to propagate the values to the root is the <strong>depth of the tree</strong>. </p>
 <p>We can:
 1. compute the depth of each node using depth-first search (<a href="http://romankurnovskii.com/en/tracks/algorithms-101/algorithms/#depth-first-search-dfs">DFS</a>)
 2. calculate the sum of the depths
 3. finally multiply the sum by 2^(n-1) to account for all possible configurations.</p>
-<h2 id="naive-approach">Naive approach</h2>
+<p><strong>Naive approach:</strong></p>
 <p>A naive approach would be to iterate over all possible initial configurations of <code>0s</code> and <code>1s</code> and perform the XOR operation on the tree for every time step, up to a large number (e.g., 10^100), and sum the values of all nodes.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
