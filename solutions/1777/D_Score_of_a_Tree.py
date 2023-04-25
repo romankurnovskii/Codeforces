@@ -1,5 +1,3 @@
-#  https://romankurnovskii.com/codeforces/problems/1777/
-
 from collections import defaultdict
 
 MOD = 10**9 + 7

@@ -1,5 +1,3 @@
-#  https://romankurnovskii.com/codeforces/problems/1777/
-
 def solve():
     n, m = map(int, input().split())
     a = list(map(int, input().split()))
