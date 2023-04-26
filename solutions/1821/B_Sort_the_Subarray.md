@@ -1,0 +1,1 @@
+Find two integers `l` and `r (1≤𝑙≤𝑟≤𝑛)`, such that sorting the subarray `a[l..r]` of the given array `a` would result in the given array `a`. If there are multiple answers, choose the one with the longest subarray. If there are still multiple answers, any of them is acceptable.
