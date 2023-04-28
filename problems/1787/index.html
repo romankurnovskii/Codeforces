@@ -12,20 +12,20 @@
         <meta name="author" content="Roman Kurnovskii">
       
       
-        <link rel="canonical" href="https://romankurnovskii.com/Codeforces/problems/1778/">
+        <link rel="canonical" href="https://romankurnovskii.com/Codeforces/problems/1787/">
       
       
-        <link rel="prev" href="../1777/">
+        <link rel="prev" href="../1778/">
       
       
-        <link rel="next" href="../1787/">
+        <link rel="next" href="../1788/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
     
     
       
-        <title>1778 - CodeForces Solutions</title>
+        <title>1787 - CodeForces Solutions</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1778" class="md-skip">
+        <a href="#1787" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1778
+              1787
             
           </span>
         </div>
@@ -326,6 +326,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../1778/" class="md-nav__link">
+        1778
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -338,12 +352,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          1778
+          1787
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        1778
+        1787
       </a>
       
         
@@ -362,9 +376,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a_flip_flop_sum" class="md-nav__link">
-    A_Flip_Flop_Sum
+  <a href="#a_exponential_equation" class="md-nav__link">
+    A_Exponential_Equation
   </a>
+  
+    <nav class="md-nav" aria-label="A_Exponential_Equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    Explanation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -372,20 +399,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../1787/" class="md-nav__link">
-        1787
-      </a>
     </li>
   
 
@@ -592,9 +605,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a_flip_flop_sum" class="md-nav__link">
-    A_Flip_Flop_Sum
+  <a href="#a_exponential_equation" class="md-nav__link">
+    A_Exponential_Equation
   </a>
+  
+    <nav class="md-nav" aria-label="A_Exponential_Equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    Explanation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -613,7 +639,7 @@
                   
 
   
-    <a href="https://github.com/romankurnovskii/Codeforces/blob/main/docs/problems/1778.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/romankurnovskii/Codeforces/blob/main/docs/problems/1787.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -621,8 +647,10 @@
   
 
 
-<h1 id="1778">1778</h1>
-<h2 id="a_flip_flop_sum"><a href="">A_Flip_Flop_Sum</a></h2>
+<h1 id="1787">1787</h1>
+<h2 id="a_exponential_equation"><a href="">A_Exponential_Equation</a></h2>
+<h3 id="explanation">Explanation</h3>
+<p>[Explanation](https://romankurnovskii.com/en/tracks/algorithms-101/codeforces/02-combinatorics-and-geometry/1787a/</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -634,21 +662,15 @@
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">solve</span><span class="p">():</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">solve</span><span class="p">():</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-    <span class="n">ar</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">ar</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">ar</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">ar</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">res</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span>
-            <span class="k">return</span>
-    <span class="k">if</span> <span class="n">res</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
-        <span class="n">res</span> <span class="o">-=</span> <span class="mi">4</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
     <span class="n">solve</span><span class="p">()</span>

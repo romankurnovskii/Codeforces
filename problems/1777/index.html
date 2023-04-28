@@ -456,6 +456,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../1787/" class="md-nav__link">
+        1787
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../1788/" class="md-nav__link">
         1788
       </a>
@@ -840,7 +854,7 @@
     <span class="c1"># Find the factorial of n</span>
     <span class="n">fact</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">fact</span> <span class="o">=</span> <span class="n">fact</span> <span class="o">*</span> <span class="n">i</span> <span class="o">%</span> <span class="n">MOD</span>
+        <span class="n">fact</span> <span class="o">=</span> <span class="n">fact</span> <span class="o">*</span> <span class="n">i</span> <span class="o">%</span> <span class="n">MOD</span>  <span class="c1"># requirement: size n modulo 1000000007(109+7)</span>
 
     <span class="c1"># Calculate the result by multiplying the factorial by the number of inversion pairs</span>
     <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="n">fact</span> <span class="o">*</span> <span class="n">pairs</span><span class="p">)</span> <span class="o">%</span> <span class="n">MOD</span>
