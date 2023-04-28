@@ -8,7 +8,7 @@ def solve():
     # Find the factorial of n
     fact = 1
     for i in range(1, n+1):
-        fact = fact * i % MOD
+        fact = fact * i % MOD  # requirement: size n modulo 1000000007(109+7)
 
     # Calculate the result by multiplying the factorial by the number of inversion pairs
     res = (fact * pairs) % MOD
