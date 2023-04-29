@@ -40,7 +40,13 @@ extra:
     provider: google
     property: G-26F2C5ZR4Y
   social:
+    # https://github.com/squidfunk/mkdocs-material/tree/master/material/.icons/
     - icon: fontawesome/brands/github
       link: https://github.com/romankurnovskii/Codeforces
+    - icon: simple/rss
+      link: /feed_rss_updated.xml
 #     - icon: fontawesome/brands/linkedin
 #       link: https://www.linkedin.com/in/roman-kurnovskii
+
+plugins:
+  - rss
