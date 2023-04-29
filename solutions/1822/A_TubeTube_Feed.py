@@ -3,7 +3,7 @@ def solve():
     durations = list(map(int, input().split()))
     values = list(map(int, input().split()))
 
-    max_value = 0  # ma entertainment value
+    max_value = 0  # max entertainment value
     max_index = -1
 
     # Iterate through the videos
