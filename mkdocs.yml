@@ -44,9 +44,13 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/romankurnovskii/Codeforces
     - icon: simple/rss
-      link: /feed_rss_updated.xml
+      link: https://romankurnovskii.com/codeforces/feed_rss_updated.xml
 #     - icon: fontawesome/brands/linkedin
 #       link: https://www.linkedin.com/in/roman-kurnovskii
 
 plugins:
-  - rss
+  - rss:
+      date_from_meta:
+        as_creation: "date"
+        as_update: false
+        datetime_format: "%Y-%m-%d"

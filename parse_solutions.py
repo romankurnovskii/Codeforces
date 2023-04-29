@@ -1,9 +1,25 @@
 import os
 import pathlib
 import re
-
+import requests
+import datetime
 
 def parse_solutions(root_path):
+    contest_api_url = "https://codeforces.com/api/contest.list"
+
+    # Fetch contest data from Codeforces API
+    response = requests.get(contest_api_url)
+    contests = response.json()["result"]
+
+    # Create a mapping of contest id to start date
+    contest_dates = {}
+    for contest in contests:
+        contest_id = contest["id"]
+        start_time = contest["startTimeSeconds"]
+        start_date = datetime.datetime.fromtimestamp(start_time).date()
+        contest_dates[str(contest_id)] = start_date
+    print(3232, contest_dates)
+
     for root, _, files in os.walk(root_path):
         problem_files = sorted([f for f in files if f.endswith(".py")])
         if len(problem_files) == 0:
@@ -20,15 +36,18 @@ def parse_solutions(root_path):
                 description = desc_f.read()
 
         with open(output_file, "w") as f:
+            # Add date meta tag if contest start date is available
+            print(39, problem_folder)
+            if problem_folder in contest_dates:
+                f.write(f"---\ndate: {contest_dates[problem_folder]}\n---\n\n")
+
             f.write(f"# {problem_folder}\n\n")
             f.write(f"{description}\n\n")
 
             for file in problem_files:
                 problem_name = pathlib.Path(file).stem
 
-                # Generate the problem link
-                #FIXME
-                match = re.match(r"(\d+)_([A-Za-z]+)", problem_name)
+                match = re.match(r"_([A-Za-z]+)", problem_name)
                 if match:
                     problem_number, letter = match.groups()
                     problem_link = f"https://codeforces.com/problemset/problem/{problem_number}/{letter}"
@@ -48,7 +67,6 @@ def parse_solutions(root_path):
                 with open(file_path, "r") as code_f:
                     code = code_f.read()
 
-                # f.write("### Solution\n\n")
                 f.write('```python\n')
                 f.write(code)
                 f.write('\n```\n')
