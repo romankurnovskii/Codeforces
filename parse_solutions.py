@@ -18,7 +18,6 @@ def parse_solutions(root_path):
         start_time = contest["startTimeSeconds"]
         start_date = datetime.datetime.fromtimestamp(start_time).date()
         contest_dates[str(contest_id)] = start_date
-    print(3232, contest_dates)
 
     for root, _, files in os.walk(root_path):
         problem_files = sorted([f for f in files if f.endswith(".py")])
@@ -37,7 +36,6 @@ def parse_solutions(root_path):
 
         with open(output_file, "w") as f:
             # Add date meta tag if contest start date is available
-            print(39, problem_folder)
             if problem_folder in contest_dates:
                 f.write(f"---\ndate: {contest_dates[problem_folder]}\n---\n\n")
 
