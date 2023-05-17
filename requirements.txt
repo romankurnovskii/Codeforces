@@ -1,4 +1,4 @@
 mkdocs==1.4.3
-mkdocs-material==9.1.11
+mkdocs-material==9.1.12
 mkdocs-material-extensions==1.1.1
 mkdocs-rss-plugin==1.6.0
