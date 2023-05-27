@@ -15,7 +15,11 @@ def solve():
         return
 
     remaining_cells = m - bisect_left(a, most_frequent_color)
-    if most_frequent_color == max_color_repetitions and n % k and remaining_cells > n % k:
+    if (
+        most_frequent_color == max_color_repetitions
+        and n % k
+        and remaining_cells > n % k
+    ):
         print("NO")
         return
 

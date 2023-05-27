@@ -1,4 +1,4 @@
-def solve(a,b,n):
+def solve(a, b, n):
     a_max = a[0]
 
     for i in range(n):
@@ -9,10 +9,10 @@ def solve(a,b,n):
         b[i] = min_v
 
         a_max = max(a_max, max_v)
-    
+
     if a[-1] >= a_max and b[-1] >= max(b):
-        return 'Yes'
-    return 'No'
+        return "Yes"
+    return "No"
 
 
 t = int(input())

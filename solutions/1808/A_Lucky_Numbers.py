@@ -2,6 +2,7 @@ def luck(n):
     digits = [int(d) for d in str(n)]
     return max(digits) - min(digits)
 
+
 def solve():
     l, r = map(int, input().split())
     res = l
@@ -17,6 +18,7 @@ def solve():
             break
 
     print(res)
+
 
 for _ in range(int(input())):
     solve()

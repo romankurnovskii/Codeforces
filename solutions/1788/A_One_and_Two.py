@@ -9,7 +9,7 @@ def solve(ar):
         if x == 2:
             passed_twos += 1
         if passed_twos == need_twos:
-            return i+1
+            return i + 1
 
 
 t = int(input())

@@ -17,7 +17,8 @@ def solve():
 
     res.reverse()
     print(len(res))
-    print(' '.join(map(str, res)))
+    print(" ".join(map(str, res)))
+
 
 for _ in range(int(input())):
     solve()

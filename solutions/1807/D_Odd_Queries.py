@@ -13,7 +13,9 @@ for _ in range(t):
         l, r, k = map(int, input().split())
         l -= 1
         r -= 1
-        sum_modified = prefix_sum[l] + (r - l + 1) * k + prefix_sum[-1] - prefix_sum[r + 1]
+        sum_modified = (
+            prefix_sum[l] + (r - l + 1) * k + prefix_sum[-1] - prefix_sum[r + 1]
+        )
 
         if sum_modified % 2 == 1:
             results.append("YES")

@@ -1,1 +1,1 @@
-print('security')
+print("security")

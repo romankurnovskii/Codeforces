@@ -1,6 +1,6 @@
 def solve():
     n = int(input())
-    
+
     if n == 1:
         print(1)
     elif n % 2 == 1:
@@ -12,6 +12,7 @@ def solve():
         super_permutation[::2] = even_numbers
         super_permutation[1::2] = odd_numbers
         print(*super_permutation)
+
 
 for _ in range(int(input())):
     solve()

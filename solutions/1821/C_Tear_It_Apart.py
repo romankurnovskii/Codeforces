@@ -1,6 +1,6 @@
 def solve():
     s = input()
-    min_operations = float('inf')
+    min_operations = float("inf")
 
     for i in range(26):
         current_char = chr(97 + i)

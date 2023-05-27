@@ -6,12 +6,13 @@ def solve():
     res = []
     for i in range(1, n):
         if num > 0:
-            res.append('-')
+            res.append("-")
             num -= int(s[i])
         else:
-            res.append('+')
+            res.append("+")
             num += int(s[i])
-    print(''.join(res))
+    print("".join(res))
+
 
 for _ in range(int(input())):
     solve()

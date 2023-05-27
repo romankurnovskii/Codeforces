@@ -1,7 +1,7 @@
 def solve():
     n = int(input())
     a = sorted(map(int, input().split()))
-    res = float('inf')
+    res = float("inf")
 
     if n == 1:
         res = abs(a[0] - a[1])

@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def solve():
     n = int(input())
     a = list(map(int, input().split()))
@@ -14,6 +15,7 @@ def solve():
         print(0)
     else:
         print(1 if max_value > 1 else 2)
+
 
 for _ in range(int(input())):
     solve()

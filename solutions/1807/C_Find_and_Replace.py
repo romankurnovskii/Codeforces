@@ -14,7 +14,7 @@ for _ in range(t):
             binary_values.append(1)
 
         if val == binary_values[-1]:
-            print('NO')
+            print("NO")
             break
 
         if not val:
@@ -23,4 +23,4 @@ for _ in range(t):
 
         binary_values.append(val)
     else:
-        print('YES')
+        print("YES")

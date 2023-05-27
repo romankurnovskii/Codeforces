@@ -2,6 +2,7 @@ from collections import defaultdict
 
 MOD = 10**9 + 7
 
+
 def dfs(graph, depth):
     stack = [(1, -1, True)]  # node, parent, first_visit
     while stack:
@@ -16,10 +17,11 @@ def dfs(graph, depth):
             if parent != -1:
                 depth[parent] = max(depth[parent], depth[node] + 1)
 
+
 def solve():
     n = int(input())
     graph = defaultdict(list)
-    
+
     for _ in range(n - 1):
         a, b = map(int, input().split())
         graph[a].append(b)

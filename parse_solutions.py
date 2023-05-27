@@ -4,6 +4,7 @@ import re
 import requests
 import datetime
 
+
 def parse_solutions(root_path):
     contest_api_url = "https://codeforces.com/api/contest.list"
 
@@ -65,9 +66,9 @@ def parse_solutions(root_path):
                 with open(file_path, "r") as code_f:
                     code = code_f.read()
 
-                f.write('```python\n')
+                f.write("```python\n")
                 f.write(code)
-                f.write('\n```\n')
+                f.write("\n```\n")
 
 
 if __name__ == "__main__":

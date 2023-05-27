@@ -6,6 +6,7 @@ def solve(s):
     else:
         return 4
 
+
 t = int(input())
 for _ in range(t):
     s = input()

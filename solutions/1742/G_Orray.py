@@ -8,7 +8,7 @@ for _ in range(t):
     vis = 0
     while a:
         # Find the index of the element with the highest bitwise AND with the complement of visited
-        idx = max(range(len(a)), key=lambda i: a[i] & ~vis) 
+        idx = max(range(len(a)), key=lambda i: a[i] & ~vis)
 
         if not a[idx] & ~vis:
             break

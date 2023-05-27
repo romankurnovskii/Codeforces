@@ -16,4 +16,4 @@ for _ in range(t):
     for i in range(q):
         b[i] = _arr[bisect(arr, b[i]) - 1]
 
-    print(' '.join(map(str, b)))
+    print(" ".join(map(str, b)))

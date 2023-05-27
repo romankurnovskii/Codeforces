@@ -12,14 +12,14 @@ def solve():
             break
 
     if mex == n:
-        print('No')
+        print("No")
         return
 
     L = n
     R = -1
 
     if mex + 1 not in a:
-        print('Yes')
+        print("Yes")
         return
 
     for i in range(n):
@@ -27,7 +27,7 @@ def solve():
             L = min(L, i)
             R = max(R, i)
 
-    b = a[:L] + [mex] + a[R + 1:]
+    b = a[:L] + [mex] + a[R + 1 :]
     b.sort()
     mex2 = 0
 
@@ -37,7 +37,8 @@ def solve():
         elif i > mex:
             break
 
-    print('Yes' if mex2 == mex + 1 else 'No')
+    print("Yes" if mex2 == mex + 1 else "No")
+
 
 for _ in range(int(input())):
     solve()

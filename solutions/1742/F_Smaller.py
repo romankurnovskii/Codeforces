@@ -15,8 +15,8 @@ for _ in range(t):
     q = int(input())
     s = [0] * 128
     t = [0] * 128
-    s[ord('a')] = 1
-    t[ord('a')] = 1
+    s[ord("a")] = 1
+    t[ord("a")] = 1
 
     for _ in range(q):
         d, k, x = input().split()
