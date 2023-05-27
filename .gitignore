@@ -1,6 +1,8 @@
-.venv
-site
-.cph
-input.txt
+.vscode
 .DS_Store
+.venv
+venv
+.cph
+site
+input.txt
 docs/problems/
