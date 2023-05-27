@@ -815,14 +815,14 @@
     <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;^&#39;</span> <span class="k">else</span> <span class="mi">2</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;^&quot;</span> <span class="k">else</span> <span class="mi">2</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;_&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;_&quot;</span><span class="p">:</span>
             <span class="n">res</span> <span class="o">+=</span> <span class="mi">1</span>
 
         <span class="n">gap</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39;_&#39;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s2">&quot;_&quot;</span><span class="p">:</span>
                 <span class="n">gap</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">res</span> <span class="o">+=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">gap</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
@@ -830,7 +830,7 @@
 
         <span class="n">res</span> <span class="o">+=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">gap</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;_&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;_&quot;</span><span class="p">:</span>
             <span class="n">res</span> <span class="o">+=</span> <span class="mi">1</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
@@ -875,22 +875,25 @@
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+
 
 <span class="k">def</span> <span class="nf">solve</span><span class="p">():</span>
     <span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="s1">&#39;0&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>  <span class="c1"># If string contains only &#39;1&#39;s</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;0&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>  <span class="c1"># If string contains only &#39;1&#39;s</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">n</span><span class="p">)</span>
         <span class="k">return</span>
 
     <span class="n">s</span> <span class="o">+=</span> <span class="n">s</span>  <span class="c1"># for cyclic shift handling</span>
-    <span class="n">max_group</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="n">max_group</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">curr_group</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">c</span><span class="o">==</span><span class="s1">&#39;1&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
             <span class="n">curr_group</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="n">max_group</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_group</span><span class="p">,</span> <span class="n">curr_group</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -899,6 +902,7 @@
     <span class="n">max_group</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="n">max_area</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">max_group</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">max_group</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">max_area</span><span class="p">)</span>
+
 
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
     <span class="n">solve</span><span class="p">()</span>
@@ -951,7 +955,8 @@
 <span class="normal">40</span>
 <span class="normal">41</span>
 <span class="normal">42</span>
-<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">solve</span><span class="p">():</span>
+<span class="normal">43</span>
+<span class="normal">44</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">solve</span><span class="p">():</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
     <span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
 
@@ -965,14 +970,14 @@
             <span class="k">break</span>
 
     <span class="k">if</span> <span class="n">mex</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No&quot;</span><span class="p">)</span>
         <span class="k">return</span>
 
     <span class="n">L</span> <span class="o">=</span> <span class="n">n</span>
     <span class="n">R</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 
     <span class="k">if</span> <span class="n">mex</span> <span class="o">+</span> <span class="mi">1</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Yes&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span><span class="p">)</span>
         <span class="k">return</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -980,7 +985,7 @@
             <span class="n">L</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
             <span class="n">R</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 
-    <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:</span><span class="n">L</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">mex</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">R</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">[:</span><span class="n">L</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">mex</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">R</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">:]</span>
     <span class="n">b</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
     <span class="n">mex2</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -990,7 +995,8 @@
         <span class="k">elif</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">mex</span><span class="p">:</span>
             <span class="k">break</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Yes&#39;</span> <span class="k">if</span> <span class="n">mex2</span> <span class="o">==</span> <span class="n">mex</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;No&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yes&quot;</span> <span class="k">if</span> <span class="n">mex2</span> <span class="o">==</span> <span class="n">mex</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;No&quot;</span><span class="p">)</span>
+
 
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())):</span>
     <span class="n">solve</span><span class="p">()</span>
