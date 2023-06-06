@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://github.com/romankurnovskii/Codeforces"><img src="https://codeforces.org/s/46669/images/codeforces-sponsored-by-ton.png" width="200" title="Codeforces" alt="Codeforces"></a>
+<a href="https://github.com/romankurnovskii/codeforces"><img src="https://codeforces.org/s/46669/images/codeforces-sponsored-by-ton.png" width="200" title="Codeforces solutions" alt="Codeforces"></a>
 <h1>Codeforces Solutions</h1>
 </div>
 
