@@ -52,5 +52,5 @@ plugins:
   - rss:
       date_from_meta:
         as_creation: "date"
-        as_update: false
+        as_update: "false"
         datetime_format: "%Y-%m-%d"
